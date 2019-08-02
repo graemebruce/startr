@@ -1,5 +1,7 @@
 # startr
 
+Note: This is a remix of the Globe and Mail's startr git that includes some minor tweaks and baked-in bbplot library from BBC.
+
 A template for data journalism projects in R.
 
 This project structures the data analysis process around an expected set of files and steps. This lowers the upfront effort of starting and maintaining a project and supports easier verification by providing reviewers with an expected and logically organized project. Think of it like Ruby on Rails or React, but for R analysis.

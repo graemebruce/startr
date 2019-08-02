@@ -6,7 +6,6 @@ load_requirements <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-# Returns all items in a list that are not contained in toMatch
 # toMatch can be a single item or a list of items
 exclude <- function (theList, toMatch) {
   return(setdiff(theList,include(theList,toMatch)))
@@ -136,7 +135,7 @@ simplify_string <- function(x, alpha = TRUE, digits = FALSE) {
     toupper(.) %>%
     trimws(.)
 }
-              
+
 clean_columns <- function(x) {
   cols <- x %>%
     unaccent(.) %>%
@@ -156,7 +155,7 @@ clean_columns <- function(x) {
   }
 
   return(cols)
-}              
+}
 
 convert_str_to_logical <- function(x, truthy = 'T|TRUE', falsy = 'F|FALSE') {
   x %>%
@@ -223,4 +222,4 @@ write_plot <- function(variable, width = NA, height = NA, format = NA, units = N
     width = width,
     height = height
   )
-}             
+}

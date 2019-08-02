@@ -8,21 +8,21 @@
 #
 ############################################################
 
-# begin_processing()
+begin_processing()
 
-# sample.raw <- read_csv(here::here(dir_data_raw, sample.raw.file)) %>%
-#   rename(
-#     cma = 'CMA',
-#     date = 'Date',
-#     index = 'Index',
-#     pairs = 'Pairs',
-#     sale_avg = 'SaleAverage',
-#     mom = 'MoM',
-#     yoy = 'YoY',
-#     ytd = 'YTD'
-#   ) %>%
-#   arrange(cma, desc(date))
+sample.raw <- read_csv(here::here(dir_data_raw, sample.raw.file))
+  # rename(
+  #   cma = 'CMA',
+  #   date = 'Date',
+  #   index = 'Index',
+  #   pairs = 'Pairs',
+  #   sale_avg = 'SaleAverage',
+  #   mom = 'MoM',
+  #   yoy = 'YoY',
+  #   ytd = 'YTD'
+  # ) %>%
+  # arrange(cma, desc(date))
 #
-# write_csv(sample.raw, here::here(dir_data_processed, 'sample.csv'))
+write_csv(sample.raw, here::here(dir_data_processed, 'sample.csv'))
 #
-# end_processing()
+end_processing()

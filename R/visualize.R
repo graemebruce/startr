@@ -4,23 +4,28 @@
 # Use the `write_plot` function to write the plot directly
 # to the `plots/` folder, using the variable name as
 # the filename.
+# This includes template from `bbplot` using data from gapminder
+# For templates, go to https://bbc.github.io/rcookbook/
 #
 ############################################################
 
-# plot_house_price_change <- ggplot(sample %>%
-#   filter(cma != 'C11'),
-#   aes(x = reorder(cma, yoy), y = yoy)) +
-#   geom_bar(colour = 'white', stat = 'identity') +
-#   scale_y_continuous(expand = c(0, 0), limits = c(0, 25)) +
-#   coord_flip() +
-#   labs(
-#     title = 'Year-over-year house price change in Canada\'s biggest cities',
-#     caption = 'THE GLOBE AND MAIL, SOURCE: TERANET-NATIONAL BANK',
-#     x = '',
-#     y = ''
-#   ) +
-#   theme_classic()
-#
-# plot(plot_house_price_change)
-#
-# write_plot(plot_house_price_change)
+
+#dummy data for chart from gapminder package
+line_df <- gapminder %>%
+  filter(country == "Malawi")
+
+#Make plot
+line <- ggplot(dumbbell_df, aes(x = `1967`, xend = `2007`, y = reorder(country, gap), group = country)) +
+  geom_dumbbell(colour = "#dddddd",
+                size = 3,
+                colour_x = "#FAAB18",
+                colour_xend = "#1380A1") +
+  bbc_style() +
+  labs(title="We're living longer",
+       subtitle="Biggest life expectancy rise, 1967-2007")
+
+finalise_plot(plot_name = line,
+              source = "Source: Gapminder",
+              save_filepath = "plots/filename_that_my_plot_should_be_saved_to.png",
+              width_pixels = 640,
+              height_pixels = 450)

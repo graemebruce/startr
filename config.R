@@ -8,7 +8,7 @@ options(scipen = 999)
 Sys.setenv(TZ = 'America/Toronto')
 
 # Project-specific
-config_author <- 'Firstname Lastname <firstlast@globeandmail.com>'
+config_author <- 'Graeme Bruce <grjbruce@gmail.com>'
 config_title <- 'startr'
 
 # Directories to read from and write to
@@ -22,7 +22,7 @@ dir_reports <- 'reports'
 dir_plots <- 'plots'
 
 # Files: You'll want to edit this to add your source data file names
-sample.raw.file <- 'sample.csv'
+sample.raw.file <- 'test-data.csv'
 
 # Primary and supplemental notebooks.
 # Set should_render_notebook to TRUE if using notebooks
@@ -54,7 +54,9 @@ packages <- c(
   # other stuff
   # 'cansim', 'cancensus',
   # 'log4r',
-  'beepr'
+  'beepr',
+  #For bbplot
+  'tidyr', 'gapminder','ggalt','forcats', 'R.utils', 'png', 'grid', 'ggpubr','bbplot'
 )
 
 source(here::here(dir_src, 'utils.R'))
@@ -85,3 +87,6 @@ knitr::opts_chunk$set(
   dpi = 150,
   root.dir = here::here()
 )
+
+# Add bbplot from BBC https://github.com/graemebruce/bbplot
+devtools::install_github('graemebruce/bbplot')

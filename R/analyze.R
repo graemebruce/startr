@@ -6,9 +6,4 @@
 #
 ############################################################
 
-# sample <- read_csv(here::here(dir_data_processed, 'sample.csv')) %>%
-#   group_by(cma) %>%
-#   arrange(desc(date)) %>%
-#   mutate(sale_avg_3mo = rollmean(sale_avg, k = 3, fill = NA)) %>%
-#   ungroup() %>%
-#   drop_na()
+sample <- read_csv(here::here(dir_data_processed, 'sample.csv'))
