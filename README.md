@@ -1,4 +1,4 @@
-# startr
+# startr + bbplot
 
 Note: This is a remix of the Globe and Mail's startr git that includes some minor tweaks and baked-in bbplot library from BBC.
 
