@@ -88,5 +88,7 @@ knitr::opts_chunk$set(
   root.dir = here::here()
 )
 
-# Add bbplot from BBC https://github.com/graemebruce/bbplot
-devtools::install_github('graemebruce/bbplot')
+#For StatsCan
+devtools::install_github("warint/statcanR")
+library(statcanR)
+
